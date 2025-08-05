@@ -1,0 +1,23 @@
+<?PHP 
+
+echo "<h3>All images zipped together</h3>";
+//foreach (glob($dir."materials/"."*.zip*") as $filename) 
+foreach (glob($dir."*.zip*") as $filename) 
+//{echo "<a href=\"$filename\">".basename("$filename", ".d")."</a>"."<br />"; }
+{echo "<a href=\"$filename\">$filename</a>"."<br />"; }
+//echo "<br />"."<br />";
+
+echo "<h3>Individual images</h3>";
+//foreach (glob($dir."materials/"."*.tif*") as $filename) 
+foreach (glob($dir."*.tif*") as $filename) 
+//{echo "<a href=\"$filename\">".basename("$filename", ".d")."</a>"."<br />"; }
+{echo "<a href=\"$filename\">$filename</a>"."<br />"; }
+//echo "<br />"."<br />";
+
+//foreach (glob($dir."materials/"."*.jpg*") as $filename) 
+foreach (glob($dir."*.jpg*") as $filename) 
+//{echo "<a href=\"$filename\">".basename("$filename", ".d")."</a>"."<br />"; }
+{echo "<a href=\"$filename\">$filename</a>"."<br />"; }
+//echo "<br />"."<br />";
+
+?>

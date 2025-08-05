@@ -1,0 +1,27 @@
+
+
+Next:
+
+- Re-do the same website using CSS-grid only, no tables (and maybe no iframes), because scaling is a little clunky now.
+- Clean up catalogue pages a bit
+- Add Fungi/Lichens/Mosses catalogue
+- Send link to Consortium of NorthEastern herbaria
+
+=======
+2022-03
+=======
+
+- Update the site (still old-type with tables, iframe, and some old CSS with divs and "float", haphazard)
+- Upload rough catalogue.
+- Upload Henry's Charophyte book, Warwick's illustrations book, and teaching materials.
+- Send the site to Index herbariorum.
+
+=======
+2016-09
+=======
+
+Draft/placeholder herbarium webpage 
+on http://www2.swgc.mun.ca
+or http://www2.grenfell.mun.ca
+
+Upload (and hide) also Henry Mann's and Ed Andrews' "flora" website, to keep it safe.

@@ -1,0 +1,47 @@
+/* This version uses grid template areas. This explicitly defines the order of containers. The alternative is individual container options about columns and rows. */
+.grid-container {
+	display: grid;
+	grid-template-columns: 100px auto 100px;
+	grid-auto-rows: minmax(100px, auto);
+	grid-gap: 10px;
+	grid-template-areas: 
+		"space header logo" "sidebar content navbar" "footer-left footer-center footer-right";
+/* Height 100 overflows a bit, and generally needs the overflow scroll parameter - see below - which is clunky. Better avoid. */
+/* height:95vh */
+}
+
+/* This applies colour to each grid item, just to see them well while experimenting. */
+.grid-item{
+	border: solid #333;
+	background-color: #dfdfdf;
+}
+
+.space{
+	grid-area: space
+}
+.header{
+	grid-area: header
+}
+.logo{
+	grid-area: logo
+}
+.sidebar {
+	grid-area: sidebar
+}
+.content {
+	grid-area: content;
+	/* If overflowing, could use something like this, but it is clunky, better avoid */
+	/* overflow-y: scroll; */
+}
+.navbar {
+	grid-area: navbar
+}
+.footer-left {
+	grid-area: footer-left
+}
+.footer-center {
+	grid-area: footer-center
+}
+.footer-right {
+	grid-area: footer-right
+}

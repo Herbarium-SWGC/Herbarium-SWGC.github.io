@@ -1,0 +1,193 @@
+/* BODY AND TEXT ELEMENTS */
+body{
+	background-color:beige;
+	background-size:cover;
+	}
+
+p{
+font-size: 0.8em; 
+font-family:verdana,arial,sans-serif; 
+color: dimgrey; 
+text-decoration: none; 
+margin-top: 0em; 
+margin-bottom: 0em;
+}
+
+#p-link{
+font-style: italic; 
+font-size: 1.1em; 
+color: dimgray; 
+text-decoration: none;
+margin-top: 0em; 
+margin-bottom: 0em;
+text-align:center;
+}
+
+#p-title{
+font-size: 2.5em; 
+font-family:verdana,arial,sans-serif; 
+color:dimgrey; 
+text-decoration: none; 
+text-align: center;
+margin-top: .25em; 
+margin-bottom: .25em;
+}
+
+#p-header{
+font-size: 2em; 
+font-family:verdana,arial,sans-serif; 
+color: forestgreen; 
+text-decoration: none; 
+text-align: center;
+margin-top: .25em; 
+margin-bottom: .25em;
+}
+
+#p-menus{
+font-size: 1em; 
+font-family:palatino, times, serif; 
+color: forestgreen; 
+text-decoration: none; 
+margin-top: 0em; 
+margin-bottom: 0em;
+}
+
+#p-section{
+font-size: 1.1em;
+font-family:palatino, times, serif; 
+color: dimgrey; 
+text-decoration: none; 
+font-weight:bold;
+margin-top: 0.5em; 
+}
+
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+/*LAYOUT WITH GRID AND FLEX*/
+/* This version does NOT use grid template areas which explicitly define the order of containers. Instead, using individual container options about columns and rows. */
+.grid-container {
+	display: grid;
+	grid-template-columns: 100px auto auto;
+	grid-auto-rows: minmax(50px, auto);
+	grid-gap: 10px 10px;
+	justify-content:space-evenly;
+	align-content:space-between;
+	justify-items:stretch;
+	align-items:stretch;
+/* Height 100 overflows a bit, and generally needs the overflow scroll parameter - see below - which is clunky. Better avoid. */
+/* height:95vh */
+}
+
+/* This applies colour to each grid item, just to see them well while experimenting. */
+.grid-item{
+ border: solid #333; 
+	background-color: #dfdfdf; 
+}
+
+/* This version also uses flexbox for menus */
+/* This makes it run together, e.g. horizontally rather than separate units which would be just stacked (as regular divs maybe)*/
+.flexbox-container{
+	display:flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+/* This applies colour to each flexbox item, just to see them well while experimenting. */
+.flexbox-item{
+	margin: 10px;
+	
+	border: solid #333;
+	background-color: #dfdfdf;
+	
+	min-width: 100px;
+	min-height: 20px;
+	flex-grow: 1;
+}
+
+.flex-menu1{
+}
+
+.flex-menu2{
+}
+
+.flex-menu3{
+}
+
+.flex-menu4{
+}
+
+/* Continuing with the rest of the grid layout */
+
+.space{
+	grid-column-start: 1;
+	grid-row-start:1;
+}
+.logo{
+	grid-column-start: 3;
+}
+.header{
+	grid-row-start: 1;
+	grid-column-start: 2;
+	text-align:center;
+	justify-content: center;
+	align-items: center;
+}
+.sidebar{
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+.content{
+	grid-column-start: 2;
+	grid-column-end: 3;
+	/* If overflowing, could use something like this, but it is clunky, better avoid */
+	/* overflow-y: scroll; */
+}
+.navbar{
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	text-align:center;
+}
+.footer-left{
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+.footer-center{
+	display:flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-evenly;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	text-align:center;
+}
+.footer-right{
+	grid-column-start: 3;
+	grid-column-end: 4;
+}

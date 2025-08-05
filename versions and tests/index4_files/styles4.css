@@ -1,0 +1,98 @@
+/* This version does NOT use grid template areas which explicitly define the order of containers. Instead, using individual container options about columns and rows. */
+.grid-container {
+	display: grid;
+	grid-template-columns: 100px auto 100px;
+	grid-auto-rows: minmax(50px, auto);
+	grid-gap: 10px 10px;
+	justify-content:space-evenly;
+	align-content:space-between;
+	justify-items:stretch;
+	align-items:stretch;
+/* Height 100 overflows a bit, and generally needs the overflow scroll parameter - see below - which is clunky. Better avoid. */
+/* height:95vh */
+}
+
+/* This applies colour to each grid item, just to see them well while experimenting. */
+.grid-item{
+	border: solid #333;
+	background-color: #dfdfdf;
+}
+
+/* This version also uses flexbox for menus */
+/* This makes it run together, e.g. horizontally rather than separate units which would be just stacked (as regular divs maybe)*/
+.flexbox-container{
+	display:flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+/* This applies colour to each flexbox item, just to see them well while experimenting. */
+.flexbox-item{
+	margin: 10px;
+	border: solid #333;
+	background-color: #dfdfdf;
+	min-width: 100px;
+	min-height: 20px;
+	flex-grow: 1;
+}
+
+.flex-menu1{
+}
+
+.flex-menu2{
+}
+
+.flex-menu3{
+}
+
+.flex-menu4{
+}
+
+/* Continuing with the rest of the grid layout */
+
+.space{
+	grid-column-start: 1;
+	grid-row-start:1;
+}
+.logo{
+	grid-column-start: 3;
+}
+.header{
+	grid-row-start: 1;
+	grid-column-start: 2;
+	text-align:center;
+}
+.sidebar{
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+.content{
+	grid-column-start: 2;
+	grid-column-end: 3;
+	/* If overflowing, could use something like this, but it is clunky, better avoid */
+	/* overflow-y: scroll; */
+}
+.navbar{
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+.footer-left{
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+.footer-center{
+	display: flex;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	justify-content: center;
+	align-items: center;
+}
+.footer-right{
+	grid-column-start: 3;
+	grid-column-end: 4;
+}
