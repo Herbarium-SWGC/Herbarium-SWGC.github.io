@@ -1,0 +1,90 @@
+/**
+ * CSSReset.com - How To Keep Footer At Bottom of Page with CSS
+ * 
+ * Original Tutorial: http://www.cssreset.com/2010/css-tutorials/how-to-keep-footer-at-bottom-of-page-with-css/
+ * License: Free - do whatever you like with it! Credit and linkbacks much appreciated.
+ *
+ * NB: Make sure the value for 'padding-bottom' on #content is equal to or greater than the height of #footer.
+ */
+html,
+body {
+	margin:0;
+	padding:0;
+	height:100%;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+#wrapper {
+	min-height:100%;
+	position:relative;
+}
+
+/* Header: fixed at top */
+#header {
+  background: #000000;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* fixed header height */
+  z-index: 1000;
+}
+
+/* Content: fills the space between header and footer and scrolls internally */
+#content {
+  position: fixed;
+  top: 60px; /* same as header height */
+  bottom: 100px; /* same as footer height */
+  left: 0;
+  right: 0;
+  overflow: auto;
+  padding-top: 20px; /* pushes content down below header */
+}
+
+/* Footer: fixed at bottom */
+#footer {
+  background: #000000;
+  width: 100%;
+  height: 100px; /* fixed footer height */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/*
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+*/
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+td {
+	vertical-align: top;
+}
